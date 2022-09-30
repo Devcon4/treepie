@@ -9,7 +9,8 @@
     "prebuild": "rimraf dist/*",
     "build": "cross-env NODE_ENV=production rollup -c",
     "prestart": "rimraf dist/*",
-    "start": "cross-env NODE_ENV=development rollup -c -w --debug"
+    "start": "cross-env NODE_ENV=development rollup -c -w --debug",
+    "go": "npm run build && node ./dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,9 @@
     "@types/jest": "^26.0.12",
     "core-js": "^3.8.2",
     "cross-env": "^7.0.3",
+    "dotenv": "^16.0.2",
     "jest": "^26.4.2",
+    "node-fetch": "^3.2.10",
     "rimraf": "^3.0.2",
     "rollup": "^2.26.9",
     "rollup-plugin-terser": "^7.0.2",
